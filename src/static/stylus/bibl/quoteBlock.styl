@@ -1,0 +1,85 @@
+.quoteBlock
+  background #8973DB
+  color #fff
+  position relative
+
+  & .container
+    display flex
+    flex-direction column
+
+    &>p
+      margin-top 125px
+      max-width 600px
+      align-self flex-end
+
+  & .abstraction
+    position absolute
+
+    &:nth-child(1)
+      width 28%
+      right 0
+      top 0
+
+    &:nth-child(2)
+      width 49%
+      left 0
+      bottom 0
+
+  & .logo
+    animation 30s rotates infinite linear
+    position absolute
+    right 45px
+    top 5%
+
+  &_block
+    max-width 800px
+    width 70%
+
+    & .author
+      color #F2CB05
+      font-style normal
+
+    & .quote
+      margin 50px 0 25px
+
+@keyframes rotates
+  0%
+    transform rotate(0)
+  100%
+    transform rotate(360deg)
+
+@keyframes rotatesReverse
+  0%
+    transform rotate(0)
+  100%
+    transform rotate(-360deg)
+
+@media all and (max-width 1024px)
+  .quoteBlock
+    & .logo
+      width 20%
+      top 10%
+
+@media all and (max-width 560px)
+  .quoteBlock
+    & .abstraction:nth-child(1)
+      width 80%
+
+    & .container
+      &>p
+        margin-top 30px
+
+    &_block
+      &>img
+        width 20%
+
+      & .quote
+        font-size 16px
+        margin 25px 0 20px
+      
+      & .author
+        font-size 16px
+
+    & .logo
+      display none
+        

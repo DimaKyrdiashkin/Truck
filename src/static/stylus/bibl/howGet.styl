@@ -1,0 +1,156 @@
+.howGet
+  display flex
+  flex-direction column
+  padding-bottom 0 !important
+  background #fff
+
+  & .container
+    &>h2
+      color #8973DB
+      margin-bottom 50px
+
+  &_box
+    &:last-child
+      margin-top 60px
+
+    &__header
+      margin-bottom 50px
+
+      &>h2
+        font-weight 300
+        position relative
+        color #909090
+
+        &::before
+          content ''
+          display block
+          height 1px
+          width 93%
+          background #909090
+          position absolute
+          right 0
+          top 50%
+          transform translateY(-50%)
+
+    &__body
+      display flex
+      justify-content space-between
+
+      &-left
+        width 35%
+        margin-right 50px
+
+        & h4
+          margin-bottom 50px
+
+      &-right
+        display flex
+        justify-content space-between
+        width 60%
+        margin-top 10px
+
+    &__card
+      width 190px
+      height 280px !important
+      display flex
+      flex-direction column
+      align-items center
+      text-align center
+      background #FCFCFC
+      border-radius 10px
+      box-shadow 0px 4px 4px rgba(0, 0, 0, 0.1)
+      padding 40px 10px 0
+      position relative
+
+      &-wrapper
+        display flex !important
+        justify-content center
+        padding 15px
+
+      &>h4
+        color #8973DB
+        margin-bottom 20px
+
+      &>p
+        margin-bottom 40px
+
+      &>a
+        color #8973DB
+        border 1px solid #8973DB
+        padding 12px 0
+        width 80%
+        border-radius 10px
+        position absolute
+        bottom 40px
+        left 50%
+        transform translateX(-50%)
+
+  &_bottom
+    margin-top 110px
+    display flex
+    overflow hidden
+    
+    &>img
+      width 100%
+      height intrinsic
+
+@media all and (max-width 1280px)
+  .howGet
+    &_box
+      &__body
+        &-right
+          width 70%
+
+@media all and (max-width 1024px)
+  .howGet
+    &_box
+      &__header
+        margin-bottom 30px
+
+      &__body
+        flex-direction column
+
+        &-left
+          width 100%
+          margin-right 0
+
+          &>h4
+            margin-bottom 20px
+
+        &-right
+          justify-content space-around
+          width 100%
+          margin-top 40px
+
+    &_bottom
+      &>img
+        width 120%
+        transform translateX(-10%)
+
+@media all and (max-width 768px)
+  .howGet
+    &_box
+      &__header
+        &>h2
+          &::before
+            width 90%
+
+@media all and (max-width 560px)
+  .howGet
+    &_bottom
+      &>img
+        width 200%
+        transform translateX(-20%)
+    &_box
+      &__header
+        margin-bottom 20px
+
+      &__body
+        &-left
+          &>h4
+            margin-bottom 10px
+
+    & .container
+      &>h2
+        margin-bottom 20px
+

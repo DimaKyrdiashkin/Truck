@@ -1,0 +1,191 @@
+body::-webkit-scrollbar
+  width 12px
+  background transparent
+
+body::-webkit-scrollbar-track
+  background transparent
+  padding 0 6px
+
+body::-webkit-scrollbar-thumb
+  background #383838
+
+*
+  margin 0
+  padding 0
+  scroll-behavior smooth
+  box-sizing border-box
+  font-family 'Roboto', sans-serif
+  color #0C0C0C
+  
+h1
+  font-size 2.5em
+  line-height 140%
+  color #FEFEFE
+  text-align center
+
+h2
+  font-size 1.666666em
+  line-height 140%
+  text-align center
+  margin-bottom 40px
+
+p
+  font-size 1em
+  line-height 135%
+
+.subP
+  font-size 0.888888em
+  line-height 135%
+
+.smalP
+  font-size 0.777777em
+  line-height 135%
+
+ul
+li
+  list-style none
+  line-height 140%
+
+a
+  outline none
+  text-decoration none
+  color #fff
+  
+.letter
+  font-weight 300
+
+.hidden
+  display none
+
+.show
+  display block
+
+body
+  text-size-adjust 100%
+  font-size 18px
+  color #5C5C5C
+  overflow-x hidden
+
+section:not(.promo)
+  display flex
+  justify-content center
+  width 100%
+  padding-top 90px
+  padding-bottom 110px
+  position relative
+
+.wrapper
+  display flex
+  flex-direction column
+  align-items center
+  position relative
+
+.container
+  max-width 1240px
+  width 100vw
+  position relative
+  margin 0 auto
+
+  &>h4
+    text-align center
+
+.banner
+  padding-top 132px
+  background #fff
+
+  &_box
+    border-radius 12px
+    position relative
+    width calc(100vw - 48px)
+    height 80vh
+    max-height 600px
+
+    &::before
+      content ''
+      display block
+      position absolute
+      bottom 0
+      width 100%
+      height 13px
+      background rgba(255, 255, 255, 0.4)
+      z-index 1
+
+.slick-dots
+  bottom -40px !important
+  display flex !important
+  justify-content center
+  align-items center
+
+  & li
+    margin-right 12px !important
+
+    &:last-child
+      margin-right 0
+
+    & button
+      display flex !important
+      justify-content center
+      align-items center
+      padding 0 !important
+
+      &::before
+        content '' !important
+        display block
+        background #F1F1F1
+        border-radius 50%
+        width 12px !important
+        height 12px !important
+        opacity 1 !important
+        position unset !important
+        border 1px solid #0C0C0C
+  
+  & li.slick-active button:before
+    background #0C0C0C
+
+.slick-dotted.slick-slider
+  margin-bottom 80px !important
+
+.slick-arrow
+  display none !important
+
+.slick-slide
+  &:focus
+    outline none
+
+@media all and (max-width 1440px)
+  .container
+    max-width 100%
+    padding  0 45px
+
+@media all and (max-width 1280px)
+  body
+    font-size 16px
+
+@media all and (max-width 1024px)
+  h1
+    margin-bottom 200px
+  
+  section:not(.promo)
+    padding-top 75px
+    padding-bottom 95px
+
+@media all and (max-width 768px)
+  h1
+    font-size 40px
+
+@media all and (max-width 560px)
+  body
+    font-size 14px
+
+  h2
+    font-size 24px
+
+  h4
+    font-size 18px
+
+  .container
+    padding 0 20px
+
+  section:not(.promo)
+    padding-top 40px
+    padding-bottom 60px

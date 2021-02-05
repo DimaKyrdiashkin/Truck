@@ -1,0 +1,159 @@
+.promo
+  width 100%
+  background url('../img/Promo/background.jpg') center no-repeat
+  background-size cover
+  height calc(100vh - 120px)
+  color #fff
+  display flex
+  flex-direction column
+  justify-content center
+  position relative
+
+  & .Gear
+    &Left
+      position absolute
+      top 50%
+      transform translateY(-50%)
+      left 0
+
+      & svg
+        width 100%
+        height 100%
+
+        &>#Gear1
+          animation 30s rotates infinite linear
+          transform-origin 33.4% 51.9%
+
+        &>#Gear2
+          animation 15s rotatesReverse infinite linear
+          transform-origin 36.7% 13%
+        
+        &>#Gear3
+          animation 15s rotatesReverse infinite linear
+          transform-origin 50.5% 84%
+        
+        &>#Gear4
+          animation 16s rotates infinite linear
+          transform-origin 68.5% 63%
+
+    &Right
+      position absolute
+      top 50%
+      transform translateY(-50%)
+      right 0
+
+      & svg
+        width 100%
+        height 100%
+
+        &>#Gear5
+          animation 30s rotatesReverse infinite linear
+          transform-origin 66.6% 48.2%
+        
+        &>#Gear6
+          animation 15s rotates infinite linear
+          transform-origin 63.2% 87%
+        
+        &>#Gear7
+          animation 15s rotates infinite linear
+          transform-origin 49.5% 16.1%
+        
+        &>#Gear8
+          animation 16s rotatesReverse infinite linear
+          transform-origin 31.5% 37.1%
+
+  & .container
+    display flex
+    align-items center
+    justify-content space-between
+
+  & form
+    background #FEFEFE
+    border-radius 10px
+    padding 30px
+    max-width 300px
+    text-align center
+    display flex
+    flex-direction column
+
+    &>p.smalP
+      margin-top 16px
+
+    &>label
+      margin-top 16px
+      margin-bottom 8px
+
+    &>input
+      padding 5px 10px
+      border 1px solid #303030
+      border-radius 10px
+
+      &:focus
+        outline none
+
+    &>button
+      background #FEEC03
+      border none
+      border-radius 10px
+      box-shadow 0px 4px 4px rgba(246, 195, 10, .15)
+      padding 15px 0
+      max-width 185px
+      width 100%
+      margin 32px auto 0
+
+@keyframes paintingSvg
+  0%
+    fill #5C5C5C
+  25%
+    fill #fff
+  75%
+    fill #5C5C5C
+  100%
+    fill #5C5C5C
+
+@keyframes paingSvgWrap
+  0%
+    background transparent
+  25%
+    background #66B700
+  75%
+    background transparent
+  100%
+    background transparent
+
+@media all and (max-width 1024px)
+  .promo
+    & .container
+      flex-direction column
+
+      &>img
+      & model-viewer
+        width 80vw
+        height 70vh
+
+    & .abstractionR
+      bottom unset
+      top 25%
+
+@media all and (max-width 768px)
+  .promo
+    & .container
+      & img
+      & model-viewer
+        max-height 500px
+
+@media all and (max-width 560px)
+  h1
+    font-size 24px
+    margin-left 0
+
+  .promo
+    & .container
+      & img
+        max-height 300px
+
+    & .abstractionR
+      display none
+
+    & .abstractionL
+      width 80%
