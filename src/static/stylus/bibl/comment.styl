@@ -2,6 +2,7 @@
   background #F8F8F8
 
   &_box
+    margin-top 80px
     
     &-wrapper
       display flex
@@ -37,3 +38,42 @@
         top 0
         left 50%
         transform translate(-50%, -50%)
+
+@media all and (max-width 920px)
+  .comment
+    &_box
+      &__item
+        padding 80px 60px 40px
+
+        &>img.person
+          width 120px
+
+@media all and (max-width 560px)
+  .comment
+    &_box
+      margin-top 40px
+
+      &__item
+        padding 80px 20px 40px
+        margin 0 14px 20px
+
+        & .quote
+          &>img
+            display none
+
+          &>p
+            margin 0 10px
+
+@media all and (orientation landscape) and (max-width 850px)
+  .comment
+    &_box
+      &__item
+        padding 80px 20px 40px
+        margin 0 14px 20px
+
+        & .quote
+          &>p
+            margin 0 16px 
+
+          &>img
+            display none

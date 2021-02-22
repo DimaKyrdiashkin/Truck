@@ -2,7 +2,8 @@
   width 100%
   background url('../img/Promo/background.jpg') center no-repeat
   background-size cover
-  height calc(100vh - 120px)
+  height calc(100vh - 100px)
+  min-height 600px
   color #fff
   display flex
   flex-direction column
@@ -121,39 +122,18 @@
   100%
     background transparent
 
-@media all and (max-width 1024px)
+@media all and (max-width 1440px)
   .promo
+    & .GearLeft
+    & .GearRight
+      display none
+
+@media all and (max-width 920px)
+  .promo
+    height fit-content
+
     & .container
       flex-direction column
 
-      &>img
-      & model-viewer
-        width 80vw
-        height 70vh
-
-    & .abstractionR
-      bottom unset
-      top 25%
-
-@media all and (max-width 768px)
-  .promo
-    & .container
-      & img
-      & model-viewer
-        max-height 500px
-
-@media all and (max-width 560px)
-  h1
-    font-size 24px
-    margin-left 0
-
-  .promo
-    & .container
-      & img
-        max-height 300px
-
-    & .abstractionR
-      display none
-
-    & .abstractionL
-      width 80%
+    & form
+      margin-bottom 95px

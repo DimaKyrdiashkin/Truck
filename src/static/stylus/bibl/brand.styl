@@ -1,6 +1,9 @@
 .brand
   background #303030
 
+  &_slider
+    display none !important
+
   & h2
     color #FEFEFE
     margin 0 auto 75px
@@ -12,10 +15,14 @@
     &:first-child
       left 5px
       top 5px
+      max-width 280px
+      width 20%
 
     &:nth-child(2)
       right 5px
       top 5px
+      max-width 350px
+      width 25%
 
   &_boxTop
     display flex
@@ -25,3 +32,22 @@
   &_boxBottom
     display flex
     justify-content space-between
+
+@media all and (max-width 1024px)
+  .brand
+    &_boxTop
+    &_boxBottom
+      display none
+      
+    &_slider
+      display block !important
+
+      & .slick-track
+        display flex
+
+      & li
+        min-width 300px !important
+        
+        &>img
+          display block
+          margin 0 auto

@@ -111,13 +111,14 @@ section:not(.promo)
       z-index 1
 
 .slick-dots
-  bottom -40px !important
+  top -40px !important
+  bottom unset !important
   display flex !important
   justify-content center
   align-items center
 
   & li
-    margin-right 12px !important
+    margin-right 0 !important
 
     &:last-child
       margin-right 0
@@ -131,13 +132,11 @@ section:not(.promo)
       &::before
         content '' !important
         display block
-        background #F1F1F1
-        border-radius 50%
-        width 12px !important
-        height 12px !important
+        background #a0a0a0
+        width 24px !important
+        height 4px !important
         opacity 1 !important
         position unset !important
-        border 1px solid #0C0C0C
   
   & li.slick-active button:before
     background #0C0C0C
@@ -161,31 +160,46 @@ section:not(.promo)
   body
     font-size 16px
 
-@media all and (max-width 1024px)
+@media all and (max-width 920px)
   h1
-    margin-bottom 200px
-  
-  section:not(.promo)
-    padding-top 75px
-    padding-bottom 95px
+    margin 60px 0 90px
 
 @media all and (max-width 768px)
-  h1
-    font-size 40px
+  h2
+    margin-bottom 30px
+
+  section:not(.promo)
+    padding-top 60px
+    padding-bottom 90px
 
 @media all and (max-width 560px)
+  .slick-dots
+    top -20px !important
+    bottom unset !important
+    display flex !important
+    justify-content center
+    align-items center
+
+  .slick-dotted.slick-slider
+    margin-bottom 0 !important
+
+  h1
+    font-size 28px
+
   body
     font-size 14px
 
-  h2
-    font-size 24px
-
-  h4
-    font-size 18px
-
-  .container
-    padding 0 20px
+  .container 
+    padding 0 14px
 
   section:not(.promo)
     padding-top 40px
     padding-bottom 60px
+
+@media all and (orientation landscape) and (max-width 850px)
+  section:not(.promo)
+    padding-top 40px
+    padding-bottom 60px
+  
+  h2
+    margin-bottom 30px

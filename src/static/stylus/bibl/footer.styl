@@ -8,8 +8,9 @@ footer
     justify-content space-between
     align-items center
 
-    &>img
-      height 100px
+    & .img-wrap
+      &>img
+        height 80px
 
   & .soc
     display flex
@@ -31,3 +32,52 @@ footer
 
     &>b
       color #FEFEFE
+
+@media all and (max-width 920px)
+  footer
+    & .container
+      flex-wrap wrap
+
+      & .img-wrap
+        order 1
+
+        &>img
+          margin-left 12px
+
+      &>*
+        width 50%
+
+      & .soc
+        order 3
+
+      & .subP:nth-child(3)
+        order 2
+        text-align left
+
+      & .subP:nth-child(4)
+        order 4
+        text-align left
+
+@media all and (max-width 560px)
+  footer
+    & .container
+      flex-direction column
+      text-align center
+      
+      &>*
+        order unset  !important
+        width 80%
+
+      & .img-wrap
+        margin-bottom 20px
+
+      & .soc
+        margin-bottom 16px
+        justify-content center
+
+      & .subP
+        text-align center !important
+        margin-bottom 10px
+
+        &>b
+          margin-bottom 5px

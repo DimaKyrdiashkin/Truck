@@ -11,7 +11,11 @@ header
   position sticky
   top 0
   z-index 99
-  box-shadow: 0px 12px 80px rgba(0, 0, 0, 0.05), 0px 4px 29px rgba(0, 0, 0, 0.0344991), 0px 2px 14px rgba(0, 0, 0, 0.0278145), 0px 1px 7px rgba(0, 0, 0, 0.0221855), 0px 0.5px 3px rgba(0, 0, 0, 0.0155009);
+  box-shadow 0px 12px 80px rgba(0, 0, 0, 0.05),
+    0px 4px 29px rgba(0, 0, 0, 0.0344991),
+    0px 2px 14px rgba(0, 0, 0, 0.0278145),
+    0px 1px 7px rgba(0, 0, 0, 0.0221855),
+    0px 0.5px 3px rgba(0, 0, 0, 0.0155009)
 
   & .container
     display flex
@@ -19,26 +23,26 @@ header
     justify-content space-between
 
     &>img
-      height 100px
+      height 80px
 
     &>p
       max-width 300px
       text-align center
 
-  & .soc
-    display flex
-
-    & li
+    &>.soc
       display flex
-      align-items center
-      margin-right 5px
 
-      &:last-child
-        margin-right 0
+      & li
+        display flex
+        align-items center
+        margin-right 5px
 
-      & a
-        &>img
-          display block
+        &:last-child
+          margin-right 0
+
+        & a
+          &>img
+            display block
   
   & .link
     display flex
@@ -54,13 +58,15 @@ header
 
 .mobButton
   display none
+  justify-content center
+  align-items center
   width 30px
   height 30px
   border-radius 4px
   cursor pointer
   padding 5px
   position relative
-  z-index 9999
+  z-index 1
 
   & .burger
     display block
@@ -99,30 +105,70 @@ header
       right 0
       transition .5s cubic-bezier(0.445, 0.05, 0.55, 0.95)
 
-@media all and (max-width 1440px)
-  header
-    padding 0 45px
-    max-width 100%
+.mobalMenu
+  display none
+  flex-direction column
+  align-items center
+  text-align center
+  max-width 300px
+  position absolute
+  z-index 22
+  right 45px
+  top 50%
+  background #fff
+  padding 18px 28px
+  border-radius 10px
+  box-shadow 0px 12px 80px rgba(0, 0, 0, 0.05),
+    0px 4px 29px rgba(0, 0, 0, 0.0344991),
+    0px 2px 14px rgba(0, 0, 0, 0.0278145),
+    0px 1px 7px rgba(0, 0, 0, 0.0221855),
+    0px 0.5px 3px rgba(0, 0, 0, 0.0155009)
 
-@media all and (max-width 768px)
+  &>.soc
+    display flex
+    margin-bottom 15px
+
+    &>li
+      margin-right 7px
+
+      & a
+        display block
+
+        &>img
+          display block
+
+      &:last-child
+        margin-right 0
+  
+  &>.subP
+    margin-bottom 15px
+
+@media all and (max-width 1024px)
   header
-    & .menu
-      &>li
-        margin-right 20px
-        
-        &:last-child
-          margin-right 0
+    & .container
+      &>.soc
+      &>.subP
+        display none
+
+  .mobButton
+    display flex
+
+  .mobalMenu
+    &.open
+      display flex
 
 @media all and (max-width 560px)
   header
-  footer
-    & .menu
-      display none !important
-
-  header
-    padding 0 20px
     & .container
-      padding 0
+      &>img
+        height 50px
 
-  .mobButton
-    display block
+  .mobalMenu
+    right 50%
+    transform translateX(50%)
+
+@media all and (orientation landscape) and (max-width 850px)
+  header
+    & .container
+      &>img
+        height 50px
